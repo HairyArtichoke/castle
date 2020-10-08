@@ -17,6 +17,10 @@
   background-position: top;
 }
 
+tw-passage [tags~="start"] {
+  line-height: 130%;
+}
+
 tw-story[tags~="game"] {
   background-image: url("https://i.postimg.cc/XYP9L7sQ/header-block.png"), linear-gradient(rgba(253, 190, 15, 1), rgba(0, 0, 0, 1));
   background-repeat: no-repeat;
@@ -24,9 +28,13 @@ tw-story[tags~="game"] {
   background-size: auto 7em;
 }
 
+tw-passage [tags~="game"] {
+  line-height: 115%;
+}
+
 tw-passage {
     background: white;
-  	max-width:100%;
+  	max-width:200%;
   	padding-top: 2em;
 	padding-right: 1em;
 	padding-left: 1em;
@@ -59,7 +67,6 @@ tw-passage {
   	font-size: 4vh;
   	font-size: 4vw;
   	font-size: 4vmin;
-  	line-height: 125%;
 }
 
 tw-story {
@@ -151,7 +158,7 @@ One of the cooks spots you. &quot;Hoi, take these bannocks up the men on the wal
 
 [[Yes, I REALLY do have an important message!-&gt;&quot;Yes, I REALLY do have an important message!&quot;]]
 
-[[Err, actually you know what - I&#39;ll just go...-&gt;You leave]] ]</tw-passagedata><tw-passagedata pid="7" name="&quot;The steward told me to come and help.”" tags="game" position="1574.6666666666667,1084.3333333333333" size="100,100">The guard nods at you. 
+[[Err, actually you know what - I&#39;ll just go...-&gt;You leave]] ]</tw-passagedata><tw-passagedata pid="7" name="&quot;The steward told me to come and help.”" tags="game" position="1574,1084" size="100,100">The guard nods at you. 
 
 &lt;img width=60% src=&quot;https://live.staticflickr.com/65535/50427181197_421e8dcb92_z.jpg&quot; alt=&quot;Soldier&#39;s head&quot;&gt;
 (if: $WallsHelp is 1)[&quot;Thanks for offering but we&#39;re alright just now. Go find something else to do,&quot; he says.
@@ -1115,7 +1122,7 @@ Rather than fight, the Earl of Rannoch withdraws his troops. They pack up their 
 You need to try and keep the enemy up on the walls and stop them getting down into the courtyard. Castle soldiers shoulder their way past you and run up the steps. They seem to be managing to fight the enemy back and stop any more getting in. Suddenly you realise [[you can hear cheering from up on the walls]]](else-if: $mining is 1)[The castle soldiers start fighting them. You&#39;re trying to decide whether to help or to hide when... 
 
 &lt;div style=&quot;width:100%;height:0;padding-bottom:60%;position:relative;&quot;&gt;&lt;iframe src=&quot;https://giphy.com/embed/lrypgmdPQsgRNyl138&quot; alt=&quot;gif of a big explosion&quot; width=&quot;480&quot; height=&quot;372&quot; frameBorder=&quot;0&quot; class=&quot;giphy-embed&quot; allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;
-[[You hear a deep, booming explosion -&gt;You hear a deep booming explosion]] ](else:)[The soldiers on the battlements start to fight the enemy. You and some of the other servants run towards the stairs up to the battlements. You grab a pike from the barrel at the bottom of the steps. [(alert:&quot;A pike was a long weapon with a blade on the end, similar to a spear. Sometimes also called a &#39;pole-arm&#39;.&quot;)]
+[[You hear a deep, booming explosion -&gt;You hear a deep booming explosion]] ](else:)[The soldiers on the battlements start to fight the enemy. You and some of the other servants run towards the stairs up to the battlements. You grab a pike from the barrel at the bottom of the steps. (click: &quot;pike&quot;)[(alert:&quot;A pike was a long weapon with a blade on the end, similar to a spear. Sometimes also called a &#39;pole-arm&#39;.&quot;)]
 &lt;img src = &quot;https://live.staticflickr.com/65535/50436109707_4072116d86_o.png&quot; alt=&quot;A barrel with spears and pikes in it&quot;&gt;
 You need to try and keep the enemy up on the walls and stop them getting down into the courtyard. Castle soldiers shoulder their way past you and run up the steps. Gradually they manage to beat back the Earl of Rannoch soldiers who are either killed, taken prisoner, or sent back down the scaling ladders.
 
@@ -1147,7 +1154,7 @@ There&#39;s quite a lot of them.
 
 [[Ask if they&#39;ll give you a hand to carry them back to the guard on the wall]]
 
-[[These people seem busy, I&#39;ll carry them myself]] </tw-passagedata><tw-passagedata pid="110" name="Ask if they&#39;ll give you a hand to carry them back to the guard on the wall" tags="game" position="1682.3333333333333,1393" size="100,100">(if: $feedsmith is 1)[The blacksmith looks grumpy but the apprentice stuffs the last bannock in his mouth and walks over to pile.
+[[These people seem busy, I&#39;ll carry them myself]] </tw-passagedata><tw-passagedata pid="110" name="Ask if they&#39;ll give you a hand to carry them back to the guard on the wall" tags="game" position="1682,1393" size="100,100">(if: $feedsmith is 1)[The blacksmith looks grumpy but the apprentice stuffs the last bannock in his mouth and walks over to pile.
 
 &quot;Here, I&#39;ll help&quot; he says &quot;I was fair ready for that food and one good turn deserves another.&quot;
 Together the two of you carry the pikes back to the solider guarding the stairs. He tells you to stack them in a barrel at the bottom of the steps. You ask who the pikes are for. He gives you a look and says they&#39;re for &quot;just in case&quot;.
@@ -1160,7 +1167,7 @@ You pick up one of the pikes. It&#39;s surprisingly heavy. You carry it back to 
 
 You go back and forth between the wall and the blacksmith&#39;s workshop until all the pikes are stacked in the barrel. 
 &lt;img src = &quot;https://live.staticflickr.com/65535/50436109707_4072116d86_o.png&quot; alt=&quot;A barrel with spears nad pikes in it&quot;&gt;
-[[Phew, that was hard work.-&gt;You leave]] ]</tw-passagedata><tw-passagedata pid="111" name="These people seem busy, I&#39;ll carry them myself" tags="game" position="1846.3333333333333,1390.6666666666667" size="100,100">You pick up one of the pikes. It&#39;s surprisingly heavy. You carry it back to the solider guarding the stairs. He tells you to stack it in a barrel at the bottom of the steps. You ask who the pikes are for. He gives you a look and says they&#39;re for &quot;just in case&quot;.
+[[Phew, that was hard work.-&gt;You leave]] ]</tw-passagedata><tw-passagedata pid="111" name="These people seem busy, I&#39;ll carry them myself" tags="game" position="1846,1390" size="100,100">You pick up one of the pikes. It&#39;s surprisingly heavy. You carry it back to the solider guarding the stairs. He tells you to stack it in a barrel at the bottom of the steps. You ask who the pikes are for. He gives you a look and says they&#39;re for &quot;just in case&quot;.
 
 You go back and forth between the wall and the blacksmith&#39;s workshop until all the pikes are stacked in the barrel. 
 &lt;img src = &quot;https://live.staticflickr.com/65535/50436109707_4072116d86_o.png&quot; alt=&quot;A barrel with spears nad pikes in it&quot;&gt;
@@ -1257,7 +1264,7 @@ What will you do now?
   	padding-bottom: 0.5vh;
 	line-height: 1.5vw;&quot;&gt;[[Let&#39;s get started...-&gt;Intro page]]&lt;/span&gt;]]
 {
-	(live: 1.5s)[
+	(live: 1s)[
 		(set: $transCounter to it + 1)
 
 		(if: $transCounter is 1)[
